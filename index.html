@@ -3,45 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control de LED - ESP32</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
-        }
-        h1 { color: #333; }
-        .btn-container { margin-top: 20px; }
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 0 10px;
-            transition: 0.2s;
-        }
-        #btnOn { background-color: #28a745; color: white; }
-        #btnOn:hover { background-color: #218838; }
-        #btnOff { background-color: #dc3545; color: white; }
-        #btnOff:hover { background-color: #c82333; }
-    </style>
+    <title>Panel de Control ESP32</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-    <h1>Control del LED con ESP32</h1>
-    <div class="btn-container">
-        <button id="btnOn">Encender LED</button>
-        <button id="btnOff">Apagar LED</button>
+    <div class="card">
+        <div class="header">
+            <h1>💡 Control ESP32</h1>
+            <p>Gestión remota de iluminación</p>
+        </div>
+        <div class="status-container">
+            <span id="statusText">Estado: Esperando acción...</span>
+        </div>
+        <div class="btn-container">
+            <button id="btnOn" class="btn btn-on">Encender</button>
+            <button id="btnOff" class="btn btn-off">Apagar</button>
+        </div>
     </div>
-
-    <!-- Vinculación del archivo JS como un módulo de JavaScript -->
     <script type="module" src="js.js"></script>
 </body>
 </html>
