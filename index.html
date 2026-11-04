@@ -3,23 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Control ESP32</title>
+    <title>ESP32 | Smart Control</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="card">
+    <!-- Efectos de fondo animado -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+
+    <div class="glass-panel">
         <div class="header">
-            <h1>💡 Control ESP32</h1>
-            <p>Gestión remota de iluminación</p>
+            <h2>⚡ Núcleo ESP32</h2>
+            <p class="subtitle">Conexión Firebase Activa</p>
         </div>
-        <div class="status-container">
-            <span id="statusText">Estado: Esperando acción...</span>
+
+        <!-- Representación visual del LED -->
+        <div class="led-container">
+            <div class="led-ring" id="ledRing">
+                <div class="led-core" id="ledCore"></div>
+            </div>
         </div>
-        <div class="btn-container">
-            <button id="btnOn" class="btn btn-on">Encender</button>
-            <button id="btnOff" class="btn btn-off">Apagar</button>
+
+        <div class="status-box">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">Sistema en espera...</span>
+        </div>
+
+        <div class="controls">
+            <button id="btnOn" class="neon-btn btn-green">
+                <i></i> ENCENDER LED
+            </button>
+            <button id="btnOff" class="neon-btn btn-red">
+                <i></i> APAGAR LED
+            </button>
         </div>
     </div>
+
     <script type="module" src="js.js"></script>
 </body>
 </html>
